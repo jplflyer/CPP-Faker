@@ -128,9 +128,14 @@ docs:
 #======================================================================
 .PHONY: install
 install: ${LIB}
-	mkdir -p /usr/local/include/faker
+	mkdir -p ${INSTALL_BASE}/include/faker
+	mkdir -p ${INSTALL_BASE}/faker
+	mkdir -p ${INSTALL_BASE}/faker/docs
+	mkdir -p ${INSTALL_BASE}/faker/locales
 	cp ${LIB_DIR}/*.h ${LIB_DIR}/*.hpp ${INSTALL_BASE}/include/faker
-	cp ${LIB} ${INSTALL_BASE}/lib
+	cp ${LIB} ${INSTALL_BASE}/lib/libfaker.a
+	cp -R docs/html/ ${INSTALL_BASE}/faker/docs
+	cp -R locales/ ${INSTALL_BASE}/faker/locales
 
 #======================================================================
 # The unit tests.
