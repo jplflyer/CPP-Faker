@@ -1,0 +1,60 @@
+{
+  "en": {
+    "faker": {
+      "subscription": {
+        "subscription_terms": [
+          "Daily", 
+          "Weekly", 
+          "Monthly", 
+          "Annual", 
+          "Biennal", 
+          "Triennal", 
+          "Quinquennal", 
+          "Lifetime"
+        ], 
+        "statuses": [
+          "Active", 
+          "Idle", 
+          "Blocked", 
+          "Pending"
+        ], 
+        "plans": [
+          "Free Trial", 
+          "Basic", 
+          "Starter", 
+          "Essential", 
+          "Student", 
+          "Bronze", 
+          "Standard", 
+          "Silver", 
+          "Gold", 
+          "Platinum", 
+          "Professional", 
+          "Business", 
+          "Diamond", 
+          "Premium"
+        ], 
+        "payment_methods": [
+          "Credit card", 
+          "Debit card", 
+          "Paypal", 
+          "Cash", 
+          "Money transfer", 
+          "Bitcoins", 
+          "Cheque", 
+          "Apple Pay", 
+          "Google Pay", 
+          "WeChat Pay", 
+          "Alipay", 
+          "Visa checkout"
+        ], 
+        "payment_terms": [
+          "Payment in advance", 
+          "Monthly", 
+          "Annual", 
+          "Full subscription"
+        ]
+      }
+    }
+  }
+}

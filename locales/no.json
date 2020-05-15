@@ -1,0 +1,12 @@
+{
+  "no-NO": {
+    "faker": {
+      "invoice": {
+        "reference": {
+          "pattern": "\\d{24}#", 
+          "check_digit_method": "kidmod10"
+        }
+      }
+    }
+  }
+}

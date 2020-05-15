@@ -1,0 +1,66 @@
+{
+  "en": {
+    "faker": {
+      "chiquito": {
+        "jokes": [
+          "- Pap\u00e1r pap\u00e1r ll\u00e9vame al circo!\n - Noorl! El que quiera verte que venga a la casa", 
+          "- Est\u00e1 la cosa muy mar muy mar muy mar\n - A m\u00ed me lo va a decir que me he casao y estoy haciendo el viaje de novios solo", 
+          "- C\u00f3mo viene de borracho, \u00a1va ust\u00e9 muy cargado!\n - \u00bfQu\u00e9 quiere que d\u00e9 dos viajes?", 
+          "Naci\u00f3 un ni\u00f1o tan feo tan feo que la madre en vez de darle el pecho le daba la espalda"
+        ], 
+        "expressions": [
+          "\u00a1Aguaaa, aguaaa!", 
+          "\u00a1Al ataqueer!", 
+          "\u00a1Ereh un torpedo!", 
+          "\u00a1Fuegorrrl!", 
+          "\u00a1Hasta luego Luca!", 
+          "\u00a1Hombre malo, violento!", 
+          "\u00a1Me cago en tuh muelah!", 
+          "\u00a1Noorl!", 
+          "\u00a1Rel\u00e1hese usted!", 
+          "\u00bfTe dah cuen?", 
+          "Apiticaaaan, apiticandemorenau", 
+          "F\u00edsicamente, moralmente, diplom\u00e1ticamente", 
+          "No puedor", 
+          "Por la gloria de mi madre"
+        ], 
+        "terms": [
+          "\u00a1Cobarde!", 
+          "\u00a1Hioputarl!", 
+          "\u00bfC\u00f3mor?", 
+          "Acandemor", 
+          "Condemor", 
+          "Cuidad\u00edn", 
+          "Diodeno", 
+          "Fistro", 
+          "Grimore", 
+          "Gromenauer", 
+          "Guarrerida espa\u00f1ola", 
+          "La caidita de Roma", 
+          "Mamaarr", 
+          "Meret\u00e9rica", 
+          "Pecador", 
+          "Sesuar"
+        ], 
+        "sentences": [
+          "\u00a1Siete caballos vienen de Bonanza!", 
+          "\u00a1Se ha pasao usted con mi bambina! \u00a1Es usted un torpedo del a\u00f1o cuatro!", 
+          "\u00a1Una mala taaaaaaaarde la tiene cualquiera!", 
+          "Caballo blanco, caballo negroo", 
+          "En vez del graduado escolar ten\u00eda una etiqueta de An\u00eds del Mono", 
+          "Est\u00e1s m\u00e1s nervioso que Marco en el Sorpresa Sorpresa", 
+          "Estoy friendo los huevos con saliva", 
+          "Lo mat\u00e9 una tarde de agosto, la cal\u00f3 apretaba", 
+          "Te llamo trigo por no llamarte Rodrigo", 
+          "Te mueves m\u00e1s que los precios", 
+          "Te vi\u00e1 cort\u00e1 el fiistro dabajo", 
+          "Te vi\u00e1 borrar el cerito sesualrllr", 
+          "Te vi\u00e1 meter una multa que no te la saca ni Perry Manso", 
+          "Tengo m\u00e1s nervios que un filete de cinco pesetas", 
+          "Trabajas menos que el sastre de Tarz\u00e1n", 
+          "Uno que naci\u00f3 despu\u00e9s de los dolores"
+        ]
+      }
+    }
+  }
+}

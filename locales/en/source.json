@@ -1,0 +1,20 @@
+{
+  "en": {
+    "faker": {
+      "source": {
+        "print": {
+          "javascript": "console.log('faker_string_to_print');", 
+          "ruby": "puts 'faker_string_to_print'"
+        }, 
+        "print_1_to_10": {
+          "javascript": " for (let i=0; i<10; i++) { console.log(i); }", 
+          "ruby": " (1..10).each { |i| puts i }"
+        }, 
+        "hello_world": {
+          "javascript": "alert('Hello World!');", 
+          "ruby": "puts 'Hello World!'"
+        }
+      }
+    }
+  }
+}

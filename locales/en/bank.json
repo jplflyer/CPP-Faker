@@ -1,0 +1,330 @@
+{
+  "en": {
+    "faker": {
+      "bank": {
+        "swift_bic": [
+          "AACCGB21", 
+          "AACNGB21", 
+          "AAFMGB21", 
+          "AAHOGB21", 
+          "AAHVGB21", 
+          "AANLGB21", 
+          "AANLGB2L", 
+          "AAOGGB21", 
+          "AAPEGB21", 
+          "AAPUGB21", 
+          "AAQIGB21", 
+          "ABAZGB21", 
+          "ABBEGB21", 
+          "ABBYGB2L", 
+          "ABCCGB22", 
+          "ABCEGB2L", 
+          "ABCMGB21", 
+          "ABDIGB21", 
+          "ABECGB21", 
+          "ABFIGB21", 
+          "ABMNGB21", 
+          "ABNAGB21VOC"
+        ], 
+        "name": [
+          "UBS CLEARING AND EXECUTION SERVICES LIMITED", 
+          "ABN AMRO CORPORATE FINANCE LIMITED", 
+          "ABN AMRO FUND MANAGERS LIMITED", 
+          "ABN AMRO HOARE GOVETT SECURITIES", 
+          "ABN AMRO HOARE GOVETT CORPORATE FINANCE LTD.", 
+          "ALKEN ASSET MANAGEMENT", 
+          "ALKEN ASSET MANAGEMENT", 
+          "ABN AMRO HOARE GOVETT LIMITED", 
+          "AAC CAPITAL PARTNERS LIMITED", 
+          "ABBOTSTONE AGRICULTURAL PROPERTY UNIT TRUST", 
+          "ABN AMRO QUOTED INVESTMENTS (UK) LIMITED", 
+          "ABN AMRO MEZZANINE (UK) LIMITED", 
+          "ABBEY LIFE", 
+          "SANTANDER UK PLC", 
+          "OTKRITIE SECURITIES LIMITED", 
+          "ABC INTERNATIONAL BANK PLC", 
+          "ALLIED BANK PHILIPPINES (UK) PLC", 
+          "ABU DHABI ISLAMIC BANK", 
+          "ABG SUNDAL COLLIER LIMITED", 
+          "PGMS (GLASGOW) LIMITED", 
+          "ABINGWORTH MANAGEMENT LIMITED", 
+          "THE ROYAL BANK OF SCOTLAND PLC (FORMER RBS NV)"
+        ], 
+        "iban_details": {
+          "xk": {
+            "length": 20, 
+            "bban_pattern": "\\d{16}"
+          }, 
+          "ch": {
+            "length": 21, 
+            "bban_pattern": "\\d{5}[A-Z0-9]{12}"
+          }, 
+          "gr": {
+            "length": 27, 
+            "bban_pattern": "\\d{7}[A-Z0-9]{16}"
+          }, 
+          "cz": {
+            "length": 24, 
+            "bban_pattern": "\\d{20}"
+          }, 
+          "cy": {
+            "length": 28, 
+            "bban_pattern": "\\d{8}[A-Z0-9]{16}"
+          }, 
+          "gt": {
+            "length": 28, 
+            "bban_pattern": "[A-Z0-9]{4}\\d{2}\\d{2}[A-Z0-9]{16}"
+          }, 
+          "gb": {
+            "length": 22, 
+            "bban_pattern": "[A-Z]{4}\\d{14}"
+          }, 
+          "cr": {
+            "length": 22, 
+            "bban_pattern": "0\\d{3}\\d{14}"
+          }, 
+          "gl": {
+            "length": 18, 
+            "bban_pattern": "\\d{14}"
+          }, 
+          "gi": {
+            "length": 23, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{15}"
+          }, 
+          "ps": {
+            "length": 29, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{21}"
+          }, 
+          "lb": {
+            "length": 28, 
+            "bban_pattern": "\\d{4}[A-Z0-9]{20}"
+          }, 
+          "pt": {
+            "length": 25, 
+            "bban_pattern": "\\d{21}"
+          }, 
+          "tn": {
+            "length": 24, 
+            "bban_pattern": "\\d{20}"
+          }, 
+          "tr": {
+            "length": 26, 
+            "bban_pattern": "\\d{5}[A-Z0-9]{17}"
+          }, 
+          "lt": {
+            "length": 20, 
+            "bban_pattern": "\\d{16}"
+          }, 
+          "li": {
+            "length": 21, 
+            "bban_pattern": "\\d{5}[A-Z0-9]{12}"
+          }, 
+          "lv": {
+            "length": 21, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{13}"
+          }, 
+          "tl": {
+            "length": 23, 
+            "bban_pattern": "\\d{19}"
+          }, 
+          "lu": {
+            "length": 20, 
+            "bban_pattern": "\\d{3}[A-Z0-9]{13}"
+          }, 
+          "pk": {
+            "length": 24, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{16}"
+          }, 
+          "pl": {
+            "length": 28, 
+            "bban_pattern": "\\d{8}[A-Z0-9]{16}"
+          }, 
+          "do": {
+            "length": 28, 
+            "bban_pattern": "[A-Z]{4}\\d{20}"
+          }, 
+          "dk": {
+            "length": 18, 
+            "bban_pattern": "\\d{14}"
+          }, 
+          "hr": {
+            "length": 21, 
+            "bban_pattern": "\\d{17}"
+          }, 
+          "de": {
+            "length": 22, 
+            "bban_pattern": "\\d{18}"
+          }, 
+          "it": {
+            "length": 27, 
+            "bban_pattern": "[A-Z]\\d{10}[A-Z0-9]{12}"
+          }, 
+          "me": {
+            "length": 22, 
+            "bban_pattern": "\\d{18}"
+          }, 
+          "md": {
+            "length": 24, 
+            "bban_pattern": "[A-Z]{2}[A-Z0-9]{18}"
+          }, 
+          "mc": {
+            "length": 27, 
+            "bban_pattern": "\\d{10}[A-Z0-9]{11}\\d{2}"
+          }, 
+          "ge": {
+            "length": 22, 
+            "bban_pattern": "[A-Z]{2}\\d{16}"
+          }, 
+          "mk": {
+            "length": 19, 
+            "bban_pattern": "\\d{3}[A-Z0-9]{10}\\d{2}"
+          }, 
+          "qa": {
+            "length": 29, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{21}"
+          }, 
+          "mt": {
+            "length": 31, 
+            "bban_pattern": "[A-Z]{4}\\d{5}[A-Z0-9]{18}"
+          }, 
+          "mr": {
+            "length": 27, 
+            "bban_pattern": "\\d{23}"
+          }, 
+          "ua": {
+            "length": 29, 
+            "bban_pattern": "\\d{25}"
+          }, 
+          "il": {
+            "length": 23, 
+            "bban_pattern": "\\d{19}"
+          }, 
+          "ae": {
+            "length": 23, 
+            "bban_pattern": "\\d{19}"
+          }, 
+          "ad": {
+            "length": 24, 
+            "bban_pattern": "\\d{8}[A-Z0-9]{12}"
+          }, 
+          "vg": {
+            "length": 24, 
+            "bban_pattern": "[A-Z]{4}\\d{16}"
+          }, 
+          "ee": {
+            "length": 20, 
+            "bban_pattern": "\\d{16}"
+          }, 
+          "is": {
+            "length": 26, 
+            "bban_pattern": "\\d{22}"
+          }, 
+          "al": {
+            "length": 28, 
+            "bban_pattern": "\\d{8}[A-Z0-9]{16}"
+          }, 
+          "at": {
+            "length": 20, 
+            "bban_pattern": "\\d{16}"
+          }, 
+          "az": {
+            "length": 28, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{20}"
+          }, 
+          "ie": {
+            "length": 22, 
+            "bban_pattern": "[A-Z]{4}\\d{14}"
+          }, 
+          "es": {
+            "length": 24, 
+            "bban_pattern": "\\d{20}"
+          }, 
+          "mu": {
+            "length": 30, 
+            "bban_pattern": "[A-Z]{4}\\d{19}[A-Z]{3}"
+          }, 
+          "nl": {
+            "length": 18, 
+            "bban_pattern": "[A-Z]{4}\\d{10}"
+          }, 
+          "no": {
+            "length": 15, 
+            "bban_pattern": "\\d{11}"
+          }, 
+          "ro": {
+            "length": 24, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{16}"
+          }, 
+          "be": {
+            "length": 16, 
+            "bban_pattern": "\\d{12}"
+          }, 
+          "fr": {
+            "length": 27, 
+            "bban_pattern": "\\d{10}[A-Z0-9]{11}\\d{2}"
+          }, 
+          "bg": {
+            "length": 22, 
+            "bban_pattern": "[A-Z]{4}\\d{6}[A-Z0-9]{8}"
+          }, 
+          "ba": {
+            "length": 20, 
+            "bban_pattern": "\\d{16}"
+          }, 
+          "bh": {
+            "length": 22, 
+            "bban_pattern": "[A-Z]{4}[A-Z0-9]{14}"
+          }, 
+          "br": {
+            "length": 29, 
+            "bban_pattern": "[0-9]{8}[0-9]{5}[0-9]{10}[A-Z]{1}[A-Z0-9]{1}"
+          }, 
+          "fi": {
+            "length": 18, 
+            "bban_pattern": "\\d{14}"
+          }, 
+          "hu": {
+            "length": 28, 
+            "bban_pattern": "\\d{24}"
+          }, 
+          "fo": {
+            "length": 18, 
+            "bban_pattern": "\\d{14}"
+          }, 
+          "rs": {
+            "length": 22, 
+            "bban_pattern": "\\d{18}"
+          }, 
+          "sk": {
+            "length": 24, 
+            "bban_pattern": "\\d{20}"
+          }, 
+          "si": {
+            "length": 19, 
+            "bban_pattern": "\\d{15}"
+          }, 
+          "kw": {
+            "length": 30, 
+            "bban_pattern": "[A-Z]{4}\\d{22}"
+          }, 
+          "sm": {
+            "length": 27, 
+            "bban_pattern": "[A-Z]\\d{10}[A-Z0-9]{12}"
+          }, 
+          "kz": {
+            "length": 20, 
+            "bban_pattern": "[0-9]{3}[A-Z0-9]{13}"
+          }, 
+          "sa": {
+            "length": 24, 
+            "bban_pattern": "\\d{2}[A-Z0-9]{18}"
+          }, 
+          "se": {
+            "length": 24, 
+            "bban_pattern": "\\d{20}"
+          }
+        }
+      }
+    }
+  }
+}

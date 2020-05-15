@@ -1,0 +1,255 @@
+{
+  "en-NEP": {
+    "faker": {
+      "phone_number": {
+        "formats": [
+          "##-#######", 
+          "+977-#-#######", 
+          "+977########"
+        ]
+      }, 
+      "company": {
+        "suffix": [
+          "Pvt Ltd", 
+          "Group", 
+          "Ltd", 
+          "Limited"
+        ]
+      }, 
+      "address": {
+        "city": [
+          "Bhaktapur", 
+          "Biratnagar", 
+          "Birendranagar", 
+          "Birgunj", 
+          "Butwal", 
+          "Damak", 
+          "Dharan", 
+          "Gaur", 
+          "Gorkha", 
+          "Hetauda", 
+          "Itahari", 
+          "Janakpur", 
+          "Kathmandu", 
+          "Lahan", 
+          "Nepalgunj", 
+          "Pokhara"
+        ], 
+        "state": [
+          "Baglung", 
+          "Banke", 
+          "Bara", 
+          "Bardiya", 
+          "Bhaktapur", 
+          "Bhojupu", 
+          "Chitwan", 
+          "Dailekh", 
+          "Dang", 
+          "Dhading", 
+          "Dhankuta", 
+          "Dhanusa", 
+          "Dolakha", 
+          "Dolpha", 
+          "Gorkha", 
+          "Gulmi", 
+          "Humla", 
+          "Ilam", 
+          "Jajarkot", 
+          "Jhapa", 
+          "Jumla", 
+          "Kabhrepalanchok", 
+          "Kalikot", 
+          "Kapilvastu", 
+          "Kaski", 
+          "Kathmandu", 
+          "Lalitpur", 
+          "Lamjung", 
+          "Manang", 
+          "Mohottari", 
+          "Morang", 
+          "Mugu", 
+          "Mustang", 
+          "Myagdi", 
+          "Nawalparasi", 
+          "Nuwakot", 
+          "Palpa", 
+          "Parbat", 
+          "Parsa", 
+          "Ramechhap", 
+          "Rauswa", 
+          "Rautahat", 
+          "Rolpa", 
+          "Rupandehi", 
+          "Sankhuwasabha", 
+          "Sarlahi", 
+          "Sindhuli", 
+          "Sindhupalchok", 
+          "Sunsari", 
+          "Surket", 
+          "Syangja", 
+          "Tanahu", 
+          "Terhathum"
+        ], 
+        "default_time_zone": [
+          "Asia/Kathmandu"
+        ], 
+        "postcode": [
+          "#####"
+        ], 
+        "default_country": [
+          "Nepal"
+        ], 
+        "default_country_code": [
+          "NP"
+        ]
+      }, 
+      "name": {
+        "male_first_name": [
+          "Kamal", 
+          "Gopal", 
+          "Hari", 
+          "Himal", 
+          "Baburam", 
+          "Prachanda", 
+          "Ganesh"
+        ], 
+        "female_first_name": [
+          "Gita", 
+          "Sita", 
+          "Sarita", 
+          "Kalpana", 
+          "Neha", 
+          "Griahma", 
+          "Sujata"
+        ], 
+        "last_name": [
+          "Adhikari", 
+          "Aryal", 
+          "Baral", 
+          "Basnet", 
+          "Bastola", 
+          "Basynat", 
+          "Bhandari", 
+          "Bhattarai", 
+          "Chettri", 
+          "Devkota", 
+          "Dhakal", 
+          "Dongol", 
+          "Ghale", 
+          "Gurung", 
+          "Gyawali", 
+          "Hamal", 
+          "Jung", 
+          "KC", 
+          "Kafle", 
+          "Karki", 
+          "Khadka", 
+          "Koirala", 
+          "Lama", 
+          "Limbu", 
+          "Magar", 
+          "Maharjan", 
+          "Niroula", 
+          "Pandey", 
+          "Pradhan", 
+          "Rana", 
+          "Raut", 
+          "Sai", 
+          "Shai", 
+          "Shakya", 
+          "Sherpa", 
+          "Shrestha", 
+          "Subedi", 
+          "Tamang", 
+          "Thapa"
+        ], 
+        "middle_name": [
+          "Bahadur", 
+          "Prasad", 
+          "Lal"
+        ], 
+        "name": [
+          "#{male_first_name} #{last_name}", 
+          "#{male_first_name} #{middle_name} #{last_name}", 
+          "#{female_first_name} #{last_name}", 
+          "#{first_name} #{last_name}"
+        ], 
+        "name_with_middle": [
+          "#{first_name} #{last_name} #{last_name}"
+        ], 
+        "first_name": [
+          "Aarav", 
+          "Ajita", 
+          "Amit", 
+          "Amita", 
+          "Amrit", 
+          "Arijit", 
+          "Ashmi", 
+          "Asmita", 
+          "Bibek", 
+          "Bijay", 
+          "Bikash", 
+          "Bina", 
+          "Bishal", 
+          "Bishnu", 
+          "Buddha", 
+          "Deepika", 
+          "Dipendra", 
+          "Gagan", 
+          "Ganesh", 
+          "Khem", 
+          "Krishna", 
+          "Laxmi", 
+          "Manisha", 
+          "Nabin", 
+          "Nikita", 
+          "Niraj", 
+          "Nischal", 
+          "Padam", 
+          "Pooja", 
+          "Prabin", 
+          "Prakash", 
+          "Prashant", 
+          "Prem", 
+          "Purna", 
+          "Rajendra", 
+          "Rajina", 
+          "Raju", 
+          "Rakesh", 
+          "Ranjan", 
+          "Ratna", 
+          "Sagar", 
+          "Sandeep", 
+          "Sanjay", 
+          "Santosh", 
+          "Sarita", 
+          "Shilpa", 
+          "Shirisha", 
+          "Shristi", 
+          "Siddhartha", 
+          "Subash", 
+          "Sumeet", 
+          "Sunita", 
+          "Suraj", 
+          "Susan", 
+          "Sushant"
+        ]
+      }, 
+      "internet": {
+        "free_email": [
+          "worldlink.com.np", 
+          "gmail.com", 
+          "yahoo.com", 
+          "hotmail.com"
+        ], 
+        "domain_suffix": [
+          "np", 
+          "com", 
+          "info", 
+          "net", 
+          "org"
+        ]
+      }
+    }
+  }
+}

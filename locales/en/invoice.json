@@ -1,0 +1,12 @@
+{
+  "en": {
+    "faker": {
+      "invoice": {
+        "reference": {
+          "pattern": "\\d{3,19}#", 
+          "check_digit_method": "method_731"
+        }
+      }
+    }
+  }
+}

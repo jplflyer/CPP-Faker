@@ -1,0 +1,49 @@
+{
+  "en": {
+    "faker": {
+      "stripe": {
+        "valid_cards": {
+          "mc_debit": "5200828282828210", 
+          "mc": "5555555555554444", 
+          "amex": "378282246310005", 
+          "discover_2": "6011000990139424", 
+          "diners_club_2": "36227206271667", 
+          "discover": "6011111111111117", 
+          "visa_debit": "4000056655665556", 
+          "diners_club": "3056930009020004", 
+          "mc_prepaid": "5105105105105100", 
+          "visa": "4242424242424242", 
+          "amex_2": "371449635398431", 
+          "jcb": "3566002020360505", 
+          "mc_2_series": "2223003122003222"
+        }, 
+        "valid_tokens": {
+          "mc_debit": "tok_mastercard_debit", 
+          "mc": "tok_mastercard", 
+          "amex": "tok_amex", 
+          "discover": "tok_discover", 
+          "visa_debit": "tok_visa_debit", 
+          "diners_club": "tok_diners", 
+          "mc_prepaid": "tok_mastercard_prepaid", 
+          "visa": "tok_visa", 
+          "jcb": "tok_jcb"
+        }, 
+        "invalid_cards": {
+          "successWithReview": "4000000000009235", 
+          "declineCard": "4000000000000002", 
+          "addressFail": "4000000000000028", 
+          "cvcFail": "4000000000000101", 
+          "customerChargeFail": "4000000000000341", 
+          "addressZipFail": "4000000000000010", 
+          "addressZipUnavailable": "4000000000000044", 
+          "declineExpired": "4000000000000069", 
+          "declineProcessingError": "4000000000000119", 
+          "declineIncorrectCvc": "4000000000000127", 
+          "declineFraudulentCard": "4100000000000019", 
+          "declineIncorrectNumber": "4242424242424241", 
+          "zipFail": "4000000000000036"
+        }
+      }
+    }
+  }
+}

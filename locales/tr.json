@@ -1,0 +1,129 @@
+{
+  "tr": {
+    "faker": {
+      "phone_number": {
+        "formats": [
+          "90-###-###-####", 
+          "90.###.###.####", 
+          "90 ### ### ####", 
+          "90##########"
+        ]
+      }, 
+      "book": {
+        "publisher": [
+          "Bab\u0131ali K\u00fclt\u00fcr Yay\u0131nc\u0131l\u0131\u011f\u0131", 
+          "\u0130leti\u015fim Yay\u0131nlar\u0131", 
+          "Turkuvaz Kitap", 
+          "Kaynak Yay\u0131nlar\u0131"
+        ], 
+        "author": "#{Name.name}", 
+        "title": [
+          "Taht Oyunlar\u0131", 
+          "Maymunlar Gezegeni", 
+          "Benim Ad\u0131m K\u0131rm\u0131z\u0131", 
+          "Uykular\u0131n Do\u011fusu", 
+          "Y\u0131lanlar\u0131n \u00d6c\u00fc"
+        ], 
+        "quote": [
+          "Sab\u0131r ac\u0131d\u0131r, meyvesi tatl\u0131d\u0131r", 
+          "Dost kara g\u00fcnde belli olur", 
+          "\u00c7\u0131kmayan candan umit kesilmez", 
+          "G\u00f6zden uzak olan g\u00f6n\u00fclden de uzak olur."
+        ]
+      }, 
+      "internet": {
+        "free_email": [
+          "gmail.com", 
+          "hotmail.com.tr", 
+          "yandex.com.tr"
+        ], 
+        "safe_email": [
+          "mesela.com"
+        ], 
+        "domain_suffix": [
+          "co", 
+          "com", 
+          "com.tr", 
+          "net", 
+          "org"
+        ]
+      }, 
+      "name": {
+        "first_name": [
+          "Mehmet", 
+          "Yi\u011fit", 
+          "Batuhan", 
+          "Burak", 
+          "\u0130rem", 
+          "Buse", 
+          "Selim", 
+          "Caner"
+        ], 
+        "last_name": [
+          "Davut", 
+          "Sa\u011fd\u0131\u00e7", 
+          "\u00d6zdemir", 
+          "\u00d6zkanl\u0131", 
+          "Ekkald\u0131r", 
+          "Zengel", 
+          "Eren"
+        ], 
+        "name": [
+          "#{prefix} #{first_name} #{last_name}", 
+          "#{first_name} #{last_name}", 
+          "#{last_name} #{first_name}"
+        ], 
+        "title": {
+          "job": [
+            "M\u00fcd\u00fcr", 
+            "\u015eef", 
+            "Koordinat\u00f6r", 
+            "Ajan", 
+            "Hac\u0131", 
+            "Ba\u015fkan", 
+            "Reyiz"
+          ]
+        }, 
+        "name_with_middle": [
+          "#{prefix} #{first_name} #{last_name} #{last_name}", 
+          "#{first_name} #{last_name} #{last_name}", 
+          "#{first_name} #{last_name} #{last_name}", 
+          "#{first_name} #{last_name} #{last_name}", 
+          "#{first_name} #{last_name} #{last_name}"
+        ], 
+        "prefix": [
+          "Sn.", 
+          "Av.", 
+          "Dr."
+        ]
+      }, 
+      "address": {
+        "city_name": [
+          "\u0130stanbul", 
+          "\u0130zmir", 
+          "Eski\u015fehir", 
+          "\u015e\u0131rnak", 
+          "Edirne", 
+          "Van"
+        ], 
+        "city": [
+          "#{city_name}"
+        ], 
+        "default_country": [
+          "Turkey"
+        ], 
+        "country": [
+          "Afganistan", 
+          "Amerika Birle\u015fik Devletleri", 
+          "Fransa", 
+          "Hollanda", 
+          "Bel\u00e7ika", 
+          "Nepal", 
+          "Hindistan", 
+          "Kuala Lumpur", 
+          "Rusya"
+        ]
+      }
+    }
+  }
+}

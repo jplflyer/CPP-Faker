@@ -1,0 +1,45 @@
+{
+  "en": {
+    "faker": {
+      "relationship": {
+        "sibling": [
+          "Sister", 
+          "Brother"
+        ], 
+        "spouse": [
+          "Husband", 
+          "Wife"
+        ], 
+        "in_law": [
+          "Father-in-law", 
+          "Mother-in-law", 
+          "Sister-in-law", 
+          "Brother-in-law"
+        ], 
+        "parent": [
+          "Father", 
+          "Mother"
+        ], 
+        "familial": {
+          "extended": [
+            "Grandfather", 
+            "Grandmother", 
+            "Uncle", 
+            "Aunt", 
+            "Cousin", 
+            "Niece", 
+            "Nephew", 
+            "Grandson", 
+            "Granddaughter"
+          ], 
+          "direct": [
+            "Father", 
+            "Mother", 
+            "Sister", 
+            "Brother"
+          ]
+        }
+      }
+    }
+  }
+}
