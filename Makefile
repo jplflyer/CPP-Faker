@@ -144,6 +144,7 @@ TEST_BIN=test-bin${MACAPPEND}
 TEST_LIST= \
 	${TEST_BIN}/TestCore \
 	${TEST_BIN}/TestName \
+	${TEST_BIN}/TestNumber \
 	${TEST_BIN}/TestPhone
 
 .PHONY: tests
@@ -161,6 +162,9 @@ ${TEST_BIN}/TestCore: ${OBJDIR}/TestCore.o ${OBJDIR}/main-test.o ${LIB}
 
 ${TEST_BIN}/TestName: ${OBJDIR}/TestName.o ${OBJDIR}/main-test.o ${LIB}
 	$(CXX) ${OBJDIR}/TestName.o ${OBJDIR}/main-test.o -L. -l${LIBNAME} ${LDFLAGS_PROM} ${LDFLAGS} $(OUTPUT_OPTION)
+
+${TEST_BIN}/TestNumber: ${OBJDIR}/TestNumber.o ${OBJDIR}/main-test.o ${LIB}
+	$(CXX) ${OBJDIR}/TestNumber.o ${OBJDIR}/main-test.o -L. -l${LIBNAME} ${LDFLAGS_PROM} ${LDFLAGS} $(OUTPUT_OPTION)
 
 ${TEST_BIN}/TestPhone: ${OBJDIR}/TestPhone.o ${OBJDIR}/main-test.o ${LIB}
 	$(CXX) ${OBJDIR}/TestPhone.o ${OBJDIR}/main-test.o -L. -l${LIBNAME} ${LDFLAGS_PROM} ${LDFLAGS} $(OUTPUT_OPTION)

@@ -170,8 +170,9 @@ Base::parse(const string &path, const std::string &beginningLocale, const std::s
     return "";
 }
 
-
-
+/**
+ * Produces a random string of digits.
+ */
 std::string Faker::Base::randomDigits(int length) {
     string retVal = "";
 
