@@ -79,7 +79,6 @@ private:
 
     void loadFile(const std::string &fileName);
 
-    Pointer selectFromArray() const;
     std::string expandString(Vector &dataStack) const;
     std::string expandFormatString(Vector &dataStack) const;
     std::string expandArray(Vector &dataStack) const;
@@ -93,7 +92,7 @@ public:
 
     bool getVerbose() const { return verbose; }
     void setVerbose(bool value) { verbose = value; }
-    Vector getArray() { return array; }
+    Vector & getArray() { return array; }
     const std::string & getString() const { return strValue; }
 
     void dumpTree(int depth, const std::string &prefix = "") const;
@@ -111,6 +110,7 @@ public:
     const std::string & getDirectory() const { return ourDirectory; }
 
     std::string expand(Vector &dataStack) const;
+    Pointer selectFromArray() const;
 
     static Faker::Data globalData;
 };

@@ -317,6 +317,9 @@ Data::expandObject(Vector &dataStack) const {
     return "";
 }
 
+/**
+ * Randomly select from the array.
+ */
 Data::Pointer
 Data::selectFromArray() const {
     size_t size = array.size();

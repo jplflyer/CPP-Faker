@@ -20,4 +20,8 @@ public:
     static std::string logo();
     static std::string type();
     static std::string profession();
+
+private:
+    static std::string selectRandomWords(Data::Pointer top);
+    static std::string selectOneRandomWord(Data::Pointer top);
 };

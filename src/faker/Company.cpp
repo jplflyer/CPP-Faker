@@ -51,29 +51,12 @@ std::string Faker::Company::industry() {
  *   Faker::Company.catch_phrase #=> "Grass-roots grid-enabled portal"
  */
 std::string Faker::Company::catch_phrase() {
-    //         translate('faker.company.buzzwords').collect { |list| sample(list) }.join(' ')
-    //
-    // company.buzzwords is an array of a string-array. I think this grabs one random
-    // string from each of the three arrays. We'll do that ourself.
-
     Data::Vector dataStack;
-    Data::Pointer buzzwords = find("company.buzzwords", dataStack);
+    Data::Pointer bs = find("company.buzzwords", dataStack);
+    string retVal = "";
 
-    if (buzzwords == nullptr) {
-        return "This is a dummy catch phrase";
-    }
-
-    string retVal;
-    string delim = "";
-    if (buzzwords->getType() == Data::Type::ARRAY) {
-        for (Data::Pointer ptr: buzzwords->getArray()) {
-            Data::Vector wordsArray = ptr->getArray();
-            size_t index = Base::randomNumber(0, wordsArray.size());
-            if (index < wordsArray.size()) {
-                retVal += delim + wordsArray.at(index)->getString();
-                delim = " ";
-            }
-        }
+    if (bs != nullptr) {
+        retVal = selectRandomWords(bs);
     }
 
     return retVal;
@@ -88,7 +71,15 @@ std::string Faker::Company::catch_phrase() {
  *   Faker::Company.buzzword #=> "flexibility"
  */
 std::string Faker::Company::buzzword() {
-    return "";
+    Data::Vector dataStack;
+    Data::Pointer buzzwords = find("company.buzzwords", dataStack);
+    string retVal = "";
+
+    if (buzzwords != nullptr) {
+        retVal = selectOneRandomWord(buzzwords);
+    }
+
+    return retVal;
 }
 
 /**
@@ -102,7 +93,15 @@ std::string Faker::Company::buzzword() {
  * When a straight answer won't do, BS to the rescue!
  */
 std::string Faker::Company::bs() {
-    return "";
+    Data::Vector dataStack;
+    Data::Pointer bs = find("company.bs", dataStack);
+    string retVal = "";
+
+    if (bs != nullptr) {
+        retVal = selectRandomWords(bs);
+    }
+
+    return retVal;
 }
 
 /**
@@ -165,3 +164,71 @@ std::string Faker::Company::type() {
 std::string Faker::Company::profession() {
     return parse("company.profession");
 }
+
+/**
+ * this is a helper method for selecting either one word or a series of space-delimeted words.
+ *
+ * The path given will feed us (probably) to an array of an array of strings. We'll traverse down
+ * from there until we get to the bottom and then randomly select one word from each array.
+ */
+std::string Faker::Company::selectRandomWords(Data::Pointer top) {
+    string retVal = "";
+
+    // This should always be the case, but in case we're used for data I haven't anticipated.
+    if (top->getType() == Data::Type::ARRAY) {
+        Data::Vector & vec = top->getArray();
+
+        // I don't expect empty arrays.
+        // We should be one of two cases. Either we're nested, and we have to dive down
+        // (recursively), or we're pointing to an array of strings, and we randomly pick
+        // one string.
+
+        if (vec.size() > 0) {
+            Data::Pointer first = vec.at(0);
+
+            // We're an array of strings, so just poick one randomly?
+            if (first->getType() == Data::Type::STRING) {
+                // We're an array of strings, so randomly pick one and return.
+                Data::Pointer ptr = top->selectFromArray();
+                retVal = ptr->getString();
+            }
+
+            // We're an array of arrays, and have to recurse, once per child array.
+            else {
+                string delim = "";
+                for (Data::Pointer ptr: vec) {
+                    retVal += delim + selectRandomWords(ptr);
+                    delim = " ";
+                }
+            }
+        }
+    }
+
+    else if (top->getType() == Data::Type::STRING) {
+        retVal = top->getString();
+    }
+
+    return retVal;
+}
+
+/**
+ * This method is very similar to selectRandomWords(), but we randomly select just ONE.
+ */
+std::string
+Faker::Company::selectOneRandomWord(Data::Pointer top) {
+    string retVal = "";
+
+    // This is what happens when we get to the bottom.
+    if (top->getType() == Data::Type::STRING) {
+        retVal = top->getString();
+    }
+
+    // This is the path as we're getting to the bottom.
+    else if (top->getType() == Data::Type::ARRAY) {
+        retVal = selectOneRandomWord(top->selectFromArray());
+    }
+
+
+    return retVal;
+}
+
