@@ -250,20 +250,28 @@ Data::expandString(Vector &dataStack) const {
         string mustRecurseOn = strValue.substr(findPos + 2, endPos-findPos-2);
         lastPos = endPos + 1;
 
-        int stackSize = dataStack.size();
-        if (stackSize > 0) {
-            // This might not work if we have dots in these strings.
-            Pointer found = nullptr;
-            for (int index = stackSize - 1; found == nullptr && index >= 0; --index) {
-                Pointer tryThisOne = dataStack.at(index);
-                found = tryThisOne->find(mustRecurseOn);
-            }
-            if (found == nullptr) {
-                cout << "Couldn't find: " << mustRecurseOn << endl;
-            }
-            else {
-                string expanded = found->expand(dataStack);
-                buffer += expanded;
+        if ( ::isupper(mustRecurseOn.at(0)) ) {
+            string mustRecurseOn_LowerCase = mustRecurseOn;
+            std::for_each(mustRecurseOn_LowerCase.begin(), mustRecurseOn_LowerCase.end(), [](char &c) { c = ::tolower(c); });
+            string expanded = Base::parse(mustRecurseOn_LowerCase);
+            buffer += expanded;
+        }
+        else {
+            int stackSize = dataStack.size();
+            if (stackSize > 0) {
+                // This might not work if we have dots in these strings.
+                Pointer found = nullptr;
+                for (int index = stackSize - 1; found == nullptr && index >= 0; --index) {
+                    Pointer tryThisOne = dataStack.at(index);
+                    found = tryThisOne->find(mustRecurseOn);
+                }
+                if (found == nullptr) {
+                    cout << "expandString() -- Couldn't find: " << mustRecurseOn << endl;
+                }
+                else {
+                    string expanded = found->expand(dataStack);
+                    buffer += expanded;
+                }
             }
         }
     }

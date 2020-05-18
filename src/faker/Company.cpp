@@ -15,6 +15,8 @@ using namespace Faker;
  *
  */
 std::string Faker::Company::name() {
+    Data::Vector dataStack;
+    find("name.name", dataStack);
     return parse("company.name");
 }
 

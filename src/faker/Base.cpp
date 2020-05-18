@@ -11,7 +11,7 @@ using std::endl;
 using std::string;
 using namespace Faker;
 
-string Base::configDirName = "/usr/local/etc/cpp-faker/locales";
+string Base::configDirName = "/usr/local/faker/locales";
 string Base::locale;			// en_US
 string Base::localeBase;		// en
 std::mutex Base::baseMutex;
