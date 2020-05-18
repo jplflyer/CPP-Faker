@@ -30,7 +30,7 @@ TEST_SRC=tests
 LIB_DIR=${SRCDIR}/faker
 
 VPATH := ${SRCDIR}:${LIB_DIR}:${TEST_SRC}
-CXXFLAGS := -I/usr/local/include -I./src/includes -std=c++14 -g -Wno-unused-local-typedefs -Wno-deprecated-declarations ${AUTO_ARGUMENT}
+CXXFLAGS := -Isrc -I/usr/local/include -I./src/includes -std=c++14 -g -Wno-unused-local-typedefs -Wno-deprecated-declarations ${AUTO_ARGUMENT}
 LDFLAGS := -L./lib -lcppunit -lboost_filesystem -lstdc++
 
 SRCS_NOSORT = $(shell find . -name "*.cpp" -print)
@@ -40,7 +40,7 @@ SRCS_NODIR = $(notdir ${SRCS})
 # $(shell mkdir -p $(DEPDIR) >/dev/null)
 DEPFLAGS = -MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
 
-COMPILE.cc = $(CXX) $(DEPFLAGS) $(CXXFLAGS) $(CPPFLAGS) -Isrc $(TARGET_ARCH) -c
+COMPILE.cc = $(CXX) $(DEPFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
 POSTCOMPILE = @mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d && touch $@
 
 LIB_NOSORT := $(wildcard ${LIB_DIR}/*.cpp)

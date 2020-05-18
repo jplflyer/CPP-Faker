@@ -25,6 +25,7 @@ SOURCES += \
     ../cpp-faker/tests/TestNumber.cpp \
     ../cpp-faker/tests/TestPhone.cpp \
     Faker.cpp \
+    src/faker/Company.cpp \
     src/faker/Data.cpp \
     src/faker/Name.cpp \
     src/faker/Number.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     ../cpp-faker/tests/TestPhone.h \
     ../cpp-faker/tests/UnitTesting.h \
     Faker.h \
+    src/faker/Company.h \
     src/faker/Data.h \
     src/faker/Name.h \
     src/faker/Number.h \

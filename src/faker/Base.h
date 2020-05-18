@@ -24,6 +24,8 @@ protected:
     static bool			haveBeenSeeded;
 
     static void setup();
+
+    static Data::Pointer find(const std::string &, Data::Vector &, const std::string &beginningLocale = "", const std::string &domain = "faker");
     static std::string parse(const std::string &, const std::string &beginningLocale = "", const std::string &domain = "faker");
 
     static std::string randomDigits(int length = 1);

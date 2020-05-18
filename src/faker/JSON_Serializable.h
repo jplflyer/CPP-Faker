@@ -95,5 +95,4 @@ public:
     }
 };
 
-}// namespace Faker
-
+} // Namespace Faker

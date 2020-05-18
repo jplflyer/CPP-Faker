@@ -70,20 +70,10 @@ Base::randomNumber(long low, long high) {
 }
 
 /**
- * Parse the string. This is the core of the entire library. From Name, we see things
- * like:
- *
- * 		name.name
- * 		name.first_name
- *
- * First pass, we look up from our JSON configuration:
- *
- * 		Load localBase and locale (en and en_US).
- * 		Under that, look for en.faker.name
- * 		Under that, look for en.faker.name.name (or first_name, or whatever)
+ * This traverses our loaded data along the provided path, loading additional config as appropriate.
  */
-std::string
-Base::parse(const string &path, const std::string &beginningLocale, const std::string &domain) {
+Data::Pointer
+Base::find(const string &path, Data::Vector &dataStack, const std::string &beginningLocale, const std::string &domain) {
     setup();
 
     string ourLocale = beginningLocale != "" ? beginningLocale : localeBase;
@@ -91,7 +81,6 @@ Base::parse(const string &path, const std::string &beginningLocale, const std::s
     StringVector parts;
     parts.tokenize(path, ".");
 
-    Data::Vector dataStack;
     Data::Pointer localeData = Data::globalData.find(ourLocale);
 
     // This is probably something like "en".
@@ -100,7 +89,7 @@ Base::parse(const string &path, const std::string &beginningLocale, const std::s
         localeData = Data::globalData.find(ourLocale);
         if (localeData == nullptr) {
             std::cerr << "Faker: locale " << ourLocale << " not found" << endl;
-            return "BadValue";
+            return nullptr;
         }
 
         dataStack.push_back(localeData);
@@ -157,17 +146,36 @@ Base::parse(const string &path, const std::string &beginningLocale, const std::s
         }
     }
 
-    //======================================================================
-    // The above gets the data loaded as best we can. Now we've narrowed
-    // it down to something to pick from.
-    //======================================================================
-    if (currentPointer != nullptr) {
-        //cout << endl << endl;
-        //currentPointer->dumpTree(1, path + ": ");
-        return currentPointer->expand(dataStack);
+    return currentPointer;
+}
+
+/**
+ * Parse the string. This is the core of the entire library. From Name, we see things
+ * like:
+ *
+ * 		name.name
+ * 		name.first_name
+ *
+ * First pass, we look up from our JSON configuration:
+ *
+ * 		Load localBase and locale (en and en_US).
+ * 		Under that, look for en.faker.name
+ * 		Under that, look for en.faker.name.name (or first_name, or whatever)
+ */
+std::string
+Base::parse(const string &path, const std::string &beginningLocale, const std::string &domain) {
+    setup();
+
+    Data::Vector dataStack;
+    Data::Pointer currentPointer = find(path, dataStack, beginningLocale, domain);
+
+    if (currentPointer == nullptr) {
+        return "";
     }
 
-    return "";
+    //cout << endl << endl;
+    //currentPointer->dumpTree(1, path + ": ");
+    return currentPointer->expand(dataStack);
 }
 
 /**

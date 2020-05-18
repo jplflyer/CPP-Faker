@@ -41,7 +41,7 @@
 #include <vector>
 #include <map>
 
-#include "JSON_Serializable.h"
+#include <faker/JSON_Serializable.h>
 
 namespace Faker {
     class Data;
