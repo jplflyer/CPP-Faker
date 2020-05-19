@@ -21,12 +21,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     ../cpp-faker/src/faker/Base.cpp \
-    ../cpp-faker/src/faker/JSON_Serializable.cpp \
-    ../cpp-faker/tests/TestNumber.cpp \
-    ../cpp-faker/tests/TestPhone.cpp \
+    ../cpp-fac/faker/JSON_Serializable.cpp \
+    ../cpp-fasts/TestNumber.cpp \
+    ../cpp-fasts/TestPhone.cpp \
     Faker.cpp \
     src/faker/Company.cpp \
     src/faker/Data.cpp \
+    src/faker/ESports.cpp \
     src/faker/Name.cpp \
     src/faker/Number.cpp \
     src/faker/PhoneNumber.cpp \
@@ -36,15 +37,16 @@ SOURCES += \
     tests/main-test.cpp
 
 HEADERS += \
-    ../cpp-faker/src/faker/Base.h \
-    ../cpp-faker/src/faker/JSON_Serializable.h \
-    ../cpp-faker/src/faker/json.hpp \
-    ../cpp-faker/tests/TestNumber.h \
-    ../cpp-faker/tests/TestPhone.h \
-    ../cpp-faker/tests/UnitTesting.h \
+    ../cpp-fac/faker/Base.h \
+    ../cpp-fac/faker/JSON_Serializable.h \
+    ../cpp-fac/faker/json.hpp \
+    ../cpp-fasts/TestNumber.h \
+    ../cpp-fasts/TestPhone.h \
+    ../cpp-fasts/UnitTesting.h \
     Faker.h \
     src/faker/Company.h \
     src/faker/Data.h \
+    src/faker/ESports.h \
     src/faker/Name.h \
     src/faker/Number.h \
     src/faker/PhoneNumber.h \
