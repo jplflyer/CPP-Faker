@@ -85,12 +85,15 @@ echo:
 # You shouldn't need to invoke these directly.
 #======================================================================
 .PHONY: directories
-directories: ${DEPDIR} ${OBJDIR}
+directories: ${DEPDIR} ${OBJDIR} lib
 
 ${DEPDIR}:
 	mkdir -p $@
 
 ${OBJDIR}:
+	mkdir -p $@
+
+lib:
 	mkdir -p $@
 
 #======================================================================
