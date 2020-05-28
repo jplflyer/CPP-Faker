@@ -1,3 +1,5 @@
+#include <string>
+
 #include "StringVector.h"
 
 using std::string;
