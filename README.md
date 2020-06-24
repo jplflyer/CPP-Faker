@@ -4,12 +4,14 @@ This is my version of a C++ library for producing fake/mock data for program tes
 # License
 The software is licensed under the MIT open source license, a copy of which appears in License.txt.
 
-This project was patterened after faker-ruby, and it directly includes (translated) data files from that project. Their license appears in License-faker-ruby.
+This project was patterned after faker-ruby, and it directly includes (translated) data files from that project. Their license appears in License-faker-ruby.
 
 I have also included json.hpp from https://github.com/nlohmann/json. This software is also licensed under the MIT license.
 
+Included also is Howard Hinnant's date.h, also published under the MIT license. See https://github.com/HowardHinnant/date.
+
 # Status
-As of May, 2020, I have only implemented as much as I need for my own purposes. In this case, that means Name and PhoneNumber. Address might exist soon, as might a few other objects.
+As of May, 2020, I have only implemented as much as I need for my own purposes. In this case, that means Name, PhoneNumber, Company, and one or two other groups. Address might exist soon, as might a few other objects.
 
 The generic code can handle those format strings that I've tested against, but it is every bit possible there are strings buried in all that JSON (from the Faker-Ruby YAML files) that I didn't notice and didn't test against.
 
@@ -17,7 +19,7 @@ The generic code can handle those format strings that I've tested against, but i
 Requirements:
 
 * boost
-* gnu make
+* gnu make. No promises it works on other versions of make.
 * doxygen if you want documentation
 * cppunit if you want to run the unit tests
 
