@@ -21,6 +21,8 @@ Requirements:
 * doxygen if you want documentation
 * cppunit if you want to run the unit tests
 
+To build and install:
+
     make
     make docs
     sudo make install
