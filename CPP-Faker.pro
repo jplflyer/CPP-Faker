@@ -44,6 +44,7 @@ HEADERS += \
     ../cpp-fasts/TestPhone.h \
     ../cpp-fasts/UnitTesting.h \
     Faker.h \
+    src/faker/Base.h \
     src/faker/Company.h \
     src/faker/Data.h \
     src/faker/ESports.h \

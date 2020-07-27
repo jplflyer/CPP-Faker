@@ -138,7 +138,7 @@ install: ${LIB}
 	cp ${LIB_DIR}/*.h ${LIB_DIR}/*.hpp ${INSTALL_BASE}/include/faker
 	cp ${LIB} ${INSTALL_BASE}/lib/libfaker.a
 	cp -R docs/html/ ${INSTALL_BASE}/faker/docs
-	cp -R locales/ ${INSTALL_BASE}/faker/locales
+	cp -R locales/ ${INSTALL_BASE}/faker
 
 #======================================================================
 # The unit tests.
