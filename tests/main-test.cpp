@@ -11,6 +11,7 @@
 
 
 #include "main-test.h"
+#include <faker/Base.h>
 
 using namespace std;
 
@@ -35,6 +36,8 @@ int main( int argc, char **argv)
     CppUnit::TextUi::TestRunner runner;
     CppUnit::TestFactoryRegistry &registry = CppUnit::TestFactoryRegistry::getRegistry();
     runner.addTest( registry.makeTest() );
+
+    Faker::Base::setConfigDir("./locales");
 
     //==================================================
     // If there are any args, then we're going to

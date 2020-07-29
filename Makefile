@@ -145,6 +145,7 @@ install: ${LIB}
 #======================================================================
 TEST_BIN=test-bin${MACAPPEND}
 TEST_LIST= \
+	${TEST_BIN}/TestAddress \
 	${TEST_BIN}/TestCore \
 	${TEST_BIN}/TestName \
 	${TEST_BIN}/TestNumber \
@@ -153,12 +154,15 @@ TEST_LIST= \
 .PHONY: tests
 tests: all ${TEST_BIN} ${TEST_LIST}
 
-.PHONY: mock
-mock: all ${TEST_BIN} ${TEST_MOCKS}
+.PHONY: run-tests
+run-tests: tests
+	for fname in ${TEST_LIST}; do echo $${fname} && $${fname}; done
 
-.PHONY: ${TEST_BIN}
 ${TEST_BIN}:
 	mkdir -p ${TEST_BIN}
+
+${TEST_BIN}/TestAddress: ${OBJDIR}/TestAddress.o ${OBJDIR}/main-test.o ${LIB}
+	$(CXX) ${OBJDIR}/TestAddress.o ${OBJDIR}/main-test.o -L. -l${LIBNAME} ${LDFLAGS_PROM} ${LDFLAGS} $(OUTPUT_OPTION)
 
 ${TEST_BIN}/TestCore: ${OBJDIR}/TestCore.o ${OBJDIR}/main-test.o ${LIB}
 	$(CXX) ${OBJDIR}/TestCore.o ${OBJDIR}/main-test.o -L. -l${LIBNAME} ${LDFLAGS_PROM} ${LDFLAGS} $(OUTPUT_OPTION)

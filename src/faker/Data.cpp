@@ -18,6 +18,8 @@ static std::string readFileContents(const std::string& path);
 //======================================================================
 Data Data::globalData(Data::Type::OBJECT);
 
+bool Data::verbose = false;
+
 //======================================================================
 // The Class.
 //======================================================================
@@ -168,7 +170,14 @@ Data::dumpTree(int depth, const string & prefix) const {
     switch (type) {
         case Type::UNKNOWN: cout << prefix << "Type Unknown" << endl; break;
         case Type::STRING: cout << prefix << strValue << endl; break;
-        case Type::ARRAY: cout << prefix << "Array[" << array.size() << "]" << endl; break;
+
+        case Type::ARRAY:
+            cout << prefix << "Array[" << array.size() << "]" << endl;
+            for (const Data::Pointer & element: array) {
+                element->dumpTree(depth - 1, prefix + " -- ");
+            }
+            break;
+
         case Type::OBJECT:
             cout << prefix << "Object Map[" << map.size() << "]" << endl;
             if (depth > 0) {
@@ -232,9 +241,17 @@ Data::expandString(Vector &dataStack) const {
     size_t lastPos = 0;
     size_t findPos;
 
+    if (verbose) {
+        cout << "Expand from " << strValue << endl;
+    }
+
     // This finds all the #{ ... }
     // The funky embedded comments are to balance the braces to help some editors.
     while ( (findPos = strValue.find("#{" /*}*/, lastPos)) != string::npos) {
+        if (verbose) {
+            cout << "Found #{ at position " << findPos << endl; /* } */
+        }
+
         // Copy intermediate values.
         if (lastPos < findPos) {
             buffer += strValue.substr(lastPos, findPos - lastPos);

@@ -75,7 +75,7 @@ private:
     /** type == OBJECT */
     ObjectMap map;
 
-    bool verbose = false;
+    static bool verbose;
 
     void loadFile(const std::string &fileName);
 
@@ -90,8 +90,8 @@ public:
 
     Type getType() const { return type; }
 
-    bool getVerbose() const { return verbose; }
-    void setVerbose(bool value) { verbose = value; }
+    static bool getVerbose() { return verbose; }
+    static void setVerbose(bool value) { verbose = value; }
     Vector & getArray() { return array; }
     const std::string & getString() const { return strValue; }
 

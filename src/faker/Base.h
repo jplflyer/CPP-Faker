@@ -22,6 +22,7 @@ protected:
     static std::mt19937 randomGenerator;
     static bool			haveBeenSetup;
     static bool			haveBeenSeeded;
+    static bool         verbose;
 
     static void setup();
 
@@ -31,6 +32,7 @@ public:
     static void setConfigDir(const std::string &value) { configDirName = value; }
     static const std::string & getConfigDirName() { return configDirName; }
     static void seed(unsigned long val);
+    static void setVerbose(bool value) { verbose = value; }
 
     static long randomNumber(long low, long high);
 

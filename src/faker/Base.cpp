@@ -18,6 +18,7 @@ std::mutex Base::baseMutex;
 std::mt19937 Base::randomGenerator;
 bool Base::haveBeenSetup = false;
 bool Base::haveBeenSeeded = false;
+bool Base::verbose = false;
 
 /**
  * Seed the random number generator with a specific value.
@@ -173,8 +174,10 @@ Base::parse(const string &path, const std::string &beginningLocale, const std::s
         return "";
     }
 
-    //cout << endl << endl;
-    //currentPointer->dumpTree(1, path + ": ");
+    if (verbose) {
+        cout << endl << endl << path << " == ";
+        currentPointer->dumpTree(1, path + ": ");
+    }
     return currentPointer->expand(dataStack);
 }
 

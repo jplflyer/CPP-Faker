@@ -1,11 +1,12 @@
-CONFIG -= qt
-
 TEMPLATE = lib
-DEFINES += CPPFAKER_LIBRARY
 
+CONFIG -= qt
 CONFIG += c++11
 
-INCLUDEPATH += ./src /usr/local/include /usr/local/include/c++
+DEFINES += CPPFAKER_LIBRARY
+
+INCLUDEPATH += /usr/local/include
+INCLUDEPATH += ./src
 INCLUDEPATH += src/includes
 
 # The following define makes your compiler emit warnings if you use
@@ -14,17 +15,10 @@ INCLUDEPATH += src/includes
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 
-# You can also make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-# You can also select to disable deprecated APIs only up to a certain version of Qt.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
 SOURCES += \
-    ../cpp-faker/src/faker/Base.cpp \
-    ../cpp-fac/faker/JSON_Serializable.cpp \
-    ../cpp-fasts/TestNumber.cpp \
-    ../cpp-fasts/TestPhone.cpp \
-    Faker.cpp \
+    src/faker/Base.cpp \
+    src/faker/JSON_Serializable.cpp \
+    src/faker/Address.cpp \
     src/faker/Company.cpp \
     src/faker/Data.cpp \
     src/faker/ESports.cpp \
@@ -32,18 +26,13 @@ SOURCES += \
     src/faker/Number.cpp \
     src/faker/PhoneNumber.cpp \
     src/faker/StringVector.cpp \
+    tests/TestAddress.cpp \
     tests/TestCore.cpp \
     tests/TestName.cpp \
     tests/main-test.cpp
 
 HEADERS += \
-    ../cpp-fac/faker/Base.h \
-    ../cpp-fac/faker/JSON_Serializable.h \
-    ../cpp-fac/faker/json.hpp \
-    ../cpp-fasts/TestNumber.h \
-    ../cpp-fasts/TestPhone.h \
-    ../cpp-fasts/UnitTesting.h \
-    Faker.h \
+    src/faker/Address.h \
     src/faker/Base.h \
     src/faker/Company.h \
     src/faker/Data.h \
@@ -52,6 +41,7 @@ HEADERS += \
     src/faker/Number.h \
     src/faker/PhoneNumber.h \
     src/faker/StringVector.h \
+    tests/TestAddress.h \
     tests/TestCore.h \
     tests/TestName.h \
     tests/main-test.h
