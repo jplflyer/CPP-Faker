@@ -47,6 +47,9 @@ namespace Faker {
     class Data;
 }
 
+/**
+ * Handles the hard part of parsing our JSON files and returning useful information.
+ */
 class Faker::Data: public Faker::JSON_Serializable {
 public:
     enum class Type { UNKNOWN, STRING, OBJECT, ARRAY};

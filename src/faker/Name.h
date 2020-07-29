@@ -7,6 +7,9 @@ namespace Faker {
     class Name;
 }
 
+/**
+ * Names of people.
+ */
 class Faker::Name: public Faker::Base
 {
 public:

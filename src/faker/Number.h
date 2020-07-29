@@ -6,6 +6,9 @@ namespace Faker {
     class Number;
 } // namespace Faker
 
+/**
+ * Sample numeric data.
+ */
 class Faker::Number : public Faker::Base
 {
 public:

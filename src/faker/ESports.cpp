@@ -3,9 +3,7 @@
 /**
  * Produces the name of a professional eSports player.
  *
- * @return [String]
- *
- * @example
+ * ## Examples
  *   Faker::Esport::player() => "Crimsix"
  */
 std::string
@@ -16,9 +14,7 @@ Faker::ESports::player() {
 /**
  * Produces the name of an eSports team.
  *
- * @return [String]
- *
- * @example
+ * ## Examples
  *   Faker::Esport::team() => "CLG"
  */
 std::string
@@ -29,9 +25,7 @@ Faker::ESports::team() {
 /**
  * Produces the name of an eSports league.
  *
- * @return [String]
- *
- * @example
+ * ## Examples
  *   Faker::Esport::league() => "IEM"
  */
 std::string
@@ -42,9 +36,7 @@ Faker::ESports::league() {
 /**
  * Produces the name of an eSports event.
  *
- * @return [String]
- *
- * @example
+ * ## Examples
  *   Faker::Esport::event() => "ESL Cologne"
  */
 std::string
@@ -55,9 +47,7 @@ Faker::ESports::event() {
 /**
  * Produces the name of a game played as an eSport.
  *
- * @return [String]
- *
- * @example
+ * ## Examples
  *   Faker::Esport::game() => "Dota 2"
  */
 std::string

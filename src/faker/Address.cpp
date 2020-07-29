@@ -10,11 +10,11 @@ using namespace Faker;
 /**
  * Produces the name of a city.
  *
- * @param options [Hash]
- * @option with_state [Boolean] Whether to include the state name in the output.
+ * @param with_state Whether to include the state name in the output.
  *
- * @example
- *   Faker::Address.city => "Imogeneborough"
+ * ## Examples
+ *   Faker::Address.city() => "Imogeneborough"
+ *
  *   Faker::Address.city(options: { with_state: true })
  *     => "Northfort, California"
  */
@@ -28,7 +28,7 @@ std::string Faker::Address::city(bool withState) {
 /**
  * Produces a street name.
  *
- * @example
+ * ## Examples
  *   Faker::Address.street_name => "Larkin Fork"
  */
 std::string Faker::Address::street_name() {
@@ -38,10 +38,11 @@ std::string Faker::Address::street_name() {
 /**
  * Produces a street address.
  *
- * @param include_secondary [Boolean] Whether or not to include the secondary address.
+ * @param include_secondary Whether or not to include the secondary address.
  *
- * @example
+ * ## Examples
  *   Faker::Address.street_address => "282 Kevin Brook"
+ *
  *   Faker::Address.street_address => "282 Kevin Brook Apt. 3"
  */
 std::string Faker::Address::street_address(bool include_secondary) {
@@ -54,7 +55,7 @@ std::string Faker::Address::street_address(bool include_secondary) {
 /**
  * Produces a secondary address.
  *
- * @example
+ * ## Examples
  *   Faker::Address.secondary_address => "Apt. 672"
  */
 std::string Faker::Address::secondary_address() {
@@ -64,7 +65,7 @@ std::string Faker::Address::secondary_address() {
 /**
  * Produces a building number.
  *
- * @example
+ * ## Examples
  *   Faker::Address.building_number => "7304"
  */
 std::string Faker::Address::building_number() {
@@ -74,7 +75,7 @@ std::string Faker::Address::building_number() {
 /**
  * Produces the name of a community.
  *
- * @example
+ * ## Examples
  *   Faker::Address.community => "University Crossing"
  */
 std::string Faker::Address::community() {
@@ -84,7 +85,7 @@ std::string Faker::Address::community() {
 /**
  *
  * Produces a mail box number.
- * @example
+ * ## Examples
  *   Faker::Address.mail_box => "PO Box 123"
  */
 std::string Faker::Address::mail_box() {
@@ -96,9 +97,11 @@ std::string Faker::Address::mail_box() {
  *
  * @param state_abbreviation [String] an abbreviation for a state where the zip code should be located.
  *
- * @example
+ * ## Examples
  *   Faker::Address.zip_code => "58517"
+ *
  *   Faker::Address.zip_code => "23285-4905"
+ *
  *   Faker::Address.zip_code(state_abbreviation: "CO") => "80011"
  */
 std::string Faker::Address::zip_code(std::string state_abbreviation) {
@@ -112,7 +115,7 @@ std::string Faker::Address::zip_code(std::string state_abbreviation) {
 /**
  * Produces the name of a time zone.
  *
- * @example
+ * ## Examples
  *   Faker::Address.time_zone => "Asia/Yakutsk"
  */
 std::string Faker::Address::time_zone() {
@@ -122,7 +125,7 @@ std::string Faker::Address::time_zone() {
 /**
  * Produces a street suffix.
  *
- * @example
+ * ## Examples
  *   Faker::Address.street_suffix => "Street"
  */
 std::string Faker::Address::street_suffix() {
@@ -132,7 +135,7 @@ std::string Faker::Address::street_suffix() {
 /**
  * Produces a city suffix.
  *
- * @example
+ * ## Examples
  *   Faker::Address.city_suffix => "fort"
  */
 std::string Faker::Address::city_suffix() {
@@ -142,7 +145,7 @@ std::string Faker::Address::city_suffix() {
 /**
  * Produces a city prefix.
  *
- * @example
+ * ## Examples
  *   Faker::Address.city_prefix => "Lake"
  */
 std::string Faker::Address::city_prefix() {
@@ -152,7 +155,7 @@ std::string Faker::Address::city_prefix() {
 /**
  * Produces a state abbreviation.
  *
- * @example
+ * ## Examples
  *   Faker::Address.state_abbr => "AP"
  */
 std::string Faker::Address::state_abbr() {
@@ -162,7 +165,7 @@ std::string Faker::Address::state_abbr() {
 /**
  * Produces the name of a state.
  *
- * @example
+ * ## Examples
  *   Faker::Address.state => "California"
  */
 std::string Faker::Address::state() {
@@ -172,7 +175,7 @@ std::string Faker::Address::state() {
 /**
  * Produces the name of a country.
  *
- * @example
+ * ## Examples
  *   Faker::Address.country => "French Guiana"
  */
 std::string Faker::Address::country() {
@@ -186,7 +189,7 @@ std::string Faker::Address::country() {
  *
  * @param code [String] An ISO country code.
  *
- * @example
+ * ## Examples
  *   Faker::Address.country_by_code(code: "NL") => "Netherlands"
  */
 std::string Faker::Address::country_by_code(std::string code) {
@@ -198,7 +201,7 @@ std::string Faker::Address::country_by_code(std::string code) {
  *
  * @param name [String] Country name in snake_case format.
  *
- * @example
+ * ## Examples
  *   Faker::Address.country_name_to_code(name: "united_states") => "US"
  */
 std::string Faker::Address::country_name_to_code(std::string name) {
@@ -208,7 +211,7 @@ std::string Faker::Address::country_name_to_code(std::string name) {
 /**
  * Produces an ISO 3166 country code.
  *
- * @example
+ * ## Examples
  *   Faker::Address.country_code => "IT"
  */
 std::string Faker::Address::country_code() {
@@ -218,7 +221,7 @@ std::string Faker::Address::country_code() {
 /**
  * Produces a long (alpha-3) ISO 3166 country code.
  *
- * @example
+ * ## Examples
  *   Faker::Address.country_code_long => "ITA"
  */
 std::string Faker::Address::country_code_long() {
@@ -228,7 +231,7 @@ std::string Faker::Address::country_code_long() {
 /**
  * Produces a latitude.
  *
- * @example
+ * ## Examples
  *   Faker::Address.latitude => -58.172562
  */
 double Faker::Address::latitude() {
@@ -239,7 +242,7 @@ double Faker::Address::latitude() {
 /**
  * Produces a longitude.
  *
- * @example
+ * ## Examples
  *   Faker::Address.longitude => -156.655483
  */
 double Faker::Address::longitude() {
@@ -250,7 +253,7 @@ double Faker::Address::longitude() {
 /**
  * Produces a full address.
  *
- * @example
+ * ## Examples
  *   Faker::Address.full_address
  *     => "282 Kevin Brook, Imogeneborough, CA 58517"
  */

@@ -6,6 +6,9 @@ namespace Faker {
     class Company;
 }
 
+/**
+ * Company names, catch phrases, etc.
+ */
 class Faker::Company : public Faker::Base
 {
 public:

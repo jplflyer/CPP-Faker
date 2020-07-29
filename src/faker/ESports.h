@@ -8,6 +8,9 @@ namespace Faker {
     class ESports;
 } // namespace Faker
 
+/**
+ * Electronic Sports like team names, events, and the like.
+ */
 class Faker::ESports : public Faker::Base
 {
 public:

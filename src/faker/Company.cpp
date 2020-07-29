@@ -8,10 +8,8 @@ using namespace Faker;
 /**
  * Produces a company name.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.name #=> "Roberts Inc"
+ * ## Examples
+ *   Faker::Company.name => "Roberts Inc"
  *
  */
 std::string Faker::Company::name() {
@@ -23,10 +21,8 @@ std::string Faker::Company::name() {
 /**
  * Produces a company suffix.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.suffix #=> "LLC"
+ * ## Examples
+ *   Faker::Company.suffix => "LLC"
  */
 std::string Faker::Company::suffix() {
     return parse("company.suffix");
@@ -35,10 +31,8 @@ std::string Faker::Company::suffix() {
 /**
  * Produces a company industry.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.industry #=> "Food & Beverages"
+ * ## Examples
+ *   Faker::Company.industry => "Food & Beverages"
  */
 std::string Faker::Company::industry() {
     return parse("company.industry");
@@ -47,10 +41,8 @@ std::string Faker::Company::industry() {
 /**
  * Produces a company catch phrase.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.catch_phrase #=> "Grass-roots grid-enabled portal"
+ * ## Examples
+ *   Faker::Company.catch_phrase => "Grass-roots grid-enabled portal"
  */
 std::string Faker::Company::catch_phrase() {
     Data::Vector dataStack;
@@ -67,10 +59,8 @@ std::string Faker::Company::catch_phrase() {
 /**
  * Produces a company buzzword.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.buzzword #=> "flexibility"
+ * ## Examples
+ *   Faker::Company.buzzword => "flexibility"
  */
 std::string Faker::Company::buzzword() {
     Data::Vector dataStack;
@@ -87,10 +77,8 @@ std::string Faker::Company::buzzword() {
 /**
  * Produces some company BS.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.bs #=> "empower customized functionalities"
+ * ## Examples
+ *   Faker::Company.bs => "empower customized functionalities"
  *
  * When a straight answer won't do, BS to the rescue!
  */
@@ -109,10 +97,8 @@ std::string Faker::Company::bs() {
 /**
  * Produces a company EIN (Employer Identification Number).
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.ein #=> "07-4009024"
+ * ## Examples
+ *   Faker::Company.ein => "07-4009024"
  */
 std::string Faker::Company::ein() {
     return Base::randomDigits(2) + "-" + Base::randomDigits(7);
@@ -121,10 +107,8 @@ std::string Faker::Company::ein() {
 /**
  * Produces a company duns number.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.duns_number #=> "70-655-5105"
+ * ## Examples
+ *   Faker::Company.duns_number => "70-655-5105"
  */
 std::string Faker::Company::duns_number() {
     return Base::randomDigits(2) + "-" + Base::randomDigits(3) + "-" + Base::randomDigits(4);
@@ -133,10 +117,8 @@ std::string Faker::Company::duns_number() {
 /**
  * Produces a company logo.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.logo #=> "https://pigment.github.io/fake-logos/logos/medium/color/12.png"
+ * ## Examples
+ *   Faker::Company.logo => "https://pigment.github.io/fake-logos/logos/medium/color/12.png"
  */
 std::string Faker::Company::logo() {
     int randomNumber = Base::randomNumber(1, 13);
@@ -146,10 +128,8 @@ std::string Faker::Company::logo() {
 /**
  * Produces a company type.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.type #=> "Partnership"
+ * ## Examples
+ *   Faker::Company.type => "Partnership"
  */
 std::string Faker::Company::type() {
     return parse("company.type");
@@ -158,10 +138,8 @@ std::string Faker::Company::type() {
 /**
  * Produces a company profession.
  *
- * @return [String]
- *
- * @example
- *   Faker::Company.profession #=> "factory worker"
+ * ## Examples
+ *   Faker::Company.profession => "factory worker"
  */
 std::string Faker::Company::profession() {
     return parse("company.profession");

@@ -6,6 +6,9 @@ namespace Faker {
     class PhoneNumber;
 }
 
+/**
+ * Phone numbers.
+ */
 class Faker::PhoneNumber : public Faker::Base
 {
 public:

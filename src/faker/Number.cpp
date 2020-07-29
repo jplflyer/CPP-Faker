@@ -27,9 +27,8 @@ Faker::Number::Number() {
  * Produce a random number.
  *
  * @param digits [Integer] Number of digits that the generated number should have.
- * @return [Integer]
  *
- * @example
+ * ## Examples
  *   Faker::Number.number(digits: 10)  *=> 1968353479
  */
 long Faker::Number::number(int digits) {
@@ -46,9 +45,8 @@ long Faker::Number::number(int digits) {
  * Produce a random number with a leading zero.
  *
  * @param digits [Integer] Number of digits that the generated number should have.
- * @return [String]
  *
- * @example
+ * ## Examples
  *   Faker::Number.leading_zero_number(digits: 10)  *=> "0669336915"
  */
 string Faker::Number::leading_zero_number(int digits) {
@@ -67,9 +65,8 @@ string Faker::Number::leading_zero_number(int digits) {
  * which would need to be zero-filled.
  *
  * @param digits [Integer] Number of digits that the generated number should have.
- * @return [String]
  *
- * @example
+ * ## Examples
  *   Faker::Number.decimal_part(digits: 2)  *=> "09"
  *
  * @faker.version 1.0.0
@@ -90,9 +87,8 @@ string Faker::Number::decimal_part(int digits) {
  *
  * @param l_digits [Integer] Number of digits that the generated decimal should have to the left of the decimal point.
  * @param r_digits [Integer] Number of digits that the generated decimal should have to the right of the decimal point.
- * @return [Float]
  *
- * @example
+ * ## Examples
  *   Faker::Number.decimal(l_digits: 2)  *=> 11.88
  *   Faker::Number.decimal(l_digits: 3, r_digits: 3)  *=> 181.843
  *
@@ -121,9 +117,8 @@ double Faker::Number::decimal(  int l_digits, int r_digits ) {
 /**
  * Produces a non-zero single-digit integer.
  *
- * @return [Integer]
  *
- * @example
+ * ## Examples
  *   Faker::Number.non_zero_digit  *=> 8
  */
 long Faker::Number::non_zero_digit() {
@@ -133,9 +128,7 @@ long Faker::Number::non_zero_digit() {
 /**
  * Produces a single-digit integer.
  *
- * @return [Integer]
- *
- * @example
+ * ## Examples
  *   Faker::Number.digit  *=> 1
  */
 long Faker::Number::digit() {
@@ -146,9 +139,8 @@ long Faker::Number::digit() {
  * Produces a number in hexadecimal format.
  *
  * @param digits [Integer] Number of digits in the he
- * @return [String]
  *
- * @example
+ * ## Examples
  *   Faker::Number.hexadecimal(digits: 3)  *=> "e74"
  */
 string Faker::Number::hexadecimal( int digits ) {
@@ -165,9 +157,8 @@ string Faker::Number::hexadecimal( int digits ) {
  *
  * @param mean [Integer]
  * @param standard_deviation [Integer, Float]
- * @return [Float]
  *
- * @example
+ * ## Examples
  *   Faker::Number.normal(mean: 50, standard_deviation: 3.5)  *=> 47.14669604069156
  */
 double Faker::Number::normal( double mean, double standard_deviation) {
@@ -200,9 +191,8 @@ double Faker::Number::normal( double mean, double standard_deviation) {
  *
  * @param from [Integer] The lowest number to include.
  * @param to [Integer] The highest number to include.
- * @return [Integer]
  *
- * @example
+ * ## Examples
  *   Faker::Number.between(from: 1, to: 10)  *=> 7
  */
 long Faker::Number::between( long from, long to ) {

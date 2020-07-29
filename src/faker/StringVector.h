@@ -7,6 +7,9 @@ namespace Faker {
     class StringVector;
 }
 
+/**
+ * A helper class for handling a vector of strings.
+ */
 class Faker::StringVector: public std::vector<std::string>
 {
 public:
