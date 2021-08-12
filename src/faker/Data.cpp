@@ -1,4 +1,6 @@
-#include <boost/filesystem.hpp>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 #include "Base.h"
 #include "Data.h"
@@ -133,9 +135,11 @@ Data::find(const string &key) const {
 Data::Pointer
 Data::load(const string &path, const string &key) {
     Data::Pointer retVal = nullptr;
-
     string tryFile = path + "/" + key + ".json";
-    if (boost::filesystem::exists(tryFile)) {
+    struct stat buf;
+
+    // On Mac inside Qt, std::filesystem::exists is problematic, so I'm just going to do this.
+    if (!stat(tryFile.c_str(), &buf)) {
         loadFile(tryFile);
     }
 

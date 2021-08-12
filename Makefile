@@ -30,8 +30,8 @@ TEST_SRC=tests
 LIB_DIR=${SRCDIR}/faker
 
 VPATH := ${SRCDIR}:${LIB_DIR}:${TEST_SRC}
-CXXFLAGS := -Isrc -I/usr/local/include -I./src/includes -std=c++14 -g -Wno-unused-local-typedefs -Wno-deprecated-declarations ${AUTO_ARGUMENT}
-LDFLAGS := -L./lib -lcppunit -lboost_filesystem -lstdc++
+CXXFLAGS := -Isrc -I/usr/local/include -I./src/includes -std=c++17 -g -Wno-unused-local-typedefs -Wno-deprecated-declarations ${AUTO_ARGUMENT}
+LDFLAGS := -L./lib -lcppunit -lstdc++
 
 SRCS_NOSORT = $(shell find . -name "*.cpp" -print)
 SRCS = $(sort ${SRCS_NOSORT})

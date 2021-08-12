@@ -1,13 +1,17 @@
 TEMPLATE = lib
 
 CONFIG -= qt
-CONFIG += c++11
+CONFIG += c++17
+QMAKE_CXXFLAGS += -std=c++17
 
 DEFINES += CPPFAKER_LIBRARY
 
 INCLUDEPATH += /usr/local/include
 INCLUDEPATH += ./src
 INCLUDEPATH += src/includes
+
+LIBS += -lstdc++fs
+QMAKE_LFLAGS += -lstdc++fs
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
