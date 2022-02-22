@@ -131,6 +131,7 @@ docs:
 #======================================================================
 .PHONY: install
 install: ${LIB}
+	mkdir -p ${PREFIX}/lib
 	mkdir -p ${PREFIX}/include/faker
 	mkdir -p ${PREFIX}/faker
 	mkdir -p ${PREFIX}/faker/docs
