@@ -54,7 +54,7 @@ ifeq ($(UNAME), Darwin)
 	LIB_ARGS= -cvr
 endif
 
-INSTALL_BASE=/usr/local
+PREFIX=/usr/local
 
 #======================================================================
 # Top-level targets.
@@ -131,14 +131,14 @@ docs:
 #======================================================================
 .PHONY: install
 install: ${LIB}
-	mkdir -p ${INSTALL_BASE}/include/faker
-	mkdir -p ${INSTALL_BASE}/faker
-	mkdir -p ${INSTALL_BASE}/faker/docs
-	mkdir -p ${INSTALL_BASE}/faker/locales
-	cp ${LIB_DIR}/*.h ${LIB_DIR}/*.hpp ${INSTALL_BASE}/include/faker
-	cp ${LIB} ${INSTALL_BASE}/lib/libfaker.a
-	cp -R docs/html/ ${INSTALL_BASE}/faker/docs
-	cp -R locales/ ${INSTALL_BASE}/faker
+	mkdir -p ${PREFIX}/include/faker
+	mkdir -p ${PREFIX}/faker
+	mkdir -p ${PREFIX}/faker/docs
+	mkdir -p ${PREFIX}/faker/locales
+	cp ${LIB_DIR}/*.h ${LIB_DIR}/*.hpp ${PREFIX}/include/faker
+	cp ${LIB} ${PREFIX}/lib/libfaker.a
+	cp -R docs/html/ ${PREFIX}/faker/docs
+	cp -R locales/ ${PREFIX}/faker
 
 #======================================================================
 # The unit tests.
