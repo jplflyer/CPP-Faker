@@ -132,7 +132,7 @@ TestName::testInitials() {
         string name = Faker::Name::initials(4);
         int spacesCount = std::count(name.begin(), name.end(), ' ');
 
-        CPPUNIT_ASSERT_EQUAL_MESSAGE("initials() value should have length 4", 0, static_cast<int>(name.length()) );
+        CPPUNIT_ASSERT_EQUAL_MESSAGE("initials() value should have length 4", 4, static_cast<int>(name.length()) );
         CPPUNIT_ASSERT_EQUAL_MESSAGE(string("initials() ") + name + ": value should have no spaces", 0, spacesCount);
     }
 }

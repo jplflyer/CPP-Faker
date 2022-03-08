@@ -41,9 +41,10 @@ Base::setup() {
     if (!haveBeenSetup) {
         haveBeenSetup = true;
         locale = std::locale().name();
+        cout << "Locale: " << locale << endl;
 
         if (locale == "C") {
-            std::locale::global(std::locale("en_US"));
+            std::locale::global(std::locale("en_US.utf8"));
             locale = std::locale().name();
             localeBase = locale.substr(0, locale.find("_"));
         }

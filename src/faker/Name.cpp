@@ -90,15 +90,18 @@ std::string Faker::Name::suffix() {
 /**
  * Produces random initials.
  *
- * @param digits [Integer] Number of digits that the generated initials should have.
+ * @param number [Integer] Number of digits that the generated initials should have.
  *
  * ## Examples
  *   Faker::Name.initials()           => "NJM"
  *   Faker::Name.initials(2)          => "NM"
- *
- * @faker.version 1.8.5
  */
 std::string Faker::Name::initials(int number) {
     //(0...number).map { rand(65..90).chr }.join
-    return "";
+    std::string retVal = "";
+    for (int index = 0; index < number; ++index) {
+        char c = 'A' + randomNumber(0, 25);
+        retVal += c;
+    }
+    return retVal;
 }

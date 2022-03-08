@@ -5,6 +5,8 @@
 #		make
 #======================================================================
 
+THREADING_ARG=-j4
+
 UNAME := $(shell uname)
 MACAPPEND=
 AUTO_ARGUMENT=
@@ -13,6 +15,10 @@ ifeq ($(UNAME), Darwin)
 	CXX=clang++
 	OS_VERSION := $(shell system_profiler SPSoftwareDataType | awk '/System Version/ { print $$4; } ')
 else
+	CORES := $(shell lscpu | egrep Core.s | cut -d: -f2)
+	ifeq ($(shell test ${CORES} -gt 4; echo $$?),0)
+		THREADING_ARG=-j ${strip ${CORES}}
+	endif
 	OS_VERSION := $(shell lsb_release -r  | cut -d: -f2)
 	OS_VERSION := $(strip ${OS_VERSION})
 	ifeq (${OS_VERSION}, 16.04)
@@ -60,7 +66,7 @@ PREFIX=/usr/local
 # Top-level targets.
 #======================================================================
 .PHONY: all
-all: directories ${LIB}
+all: directories makelib
 
 Makefile: ;
 
@@ -91,7 +97,11 @@ ${DEPDIR}:
 	mkdir -p $@
 
 ${OBJDIR}:
-	mkdir -p $@
+		mkdir -p $@
+
+.PHONY: makelib
+makelib:
+		@$(MAKE) ${THREADING_ARG} --output-sync=target --no-print-directory ${LIB}
 
 lib:
 	mkdir -p $@
@@ -153,7 +163,11 @@ TEST_LIST= \
 	${TEST_BIN}/TestPhone
 
 .PHONY: tests
-tests: all ${TEST_BIN} ${TEST_LIST}
+tests:
+		@$(MAKE) ${THREADING_ARG} --output-sync=target --no-print-directory maketests
+
+.PHONY: all maketests
+maketests: ${TEST_BIN} ${TEST_LIST}
 
 .PHONY: run-tests
 run-tests: tests

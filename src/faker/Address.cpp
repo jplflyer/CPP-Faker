@@ -10,13 +10,12 @@ using namespace Faker;
 /**
  * Produces the name of a city.
  *
- * @param with_state Whether to include the state name in the output.
+ * @param withState Whether to include the state name in the output.
  *
  * ## Examples
  *   Faker::Address.city() => "Imogeneborough"
  *
- *   Faker::Address.city(options: { with_state: true })
- *     => "Northfort, California"
+ *   Faker::Address.city(true) => "Northfort, California"
  */
 std::string Faker::Address::city(bool withState) {
     if (withState) {

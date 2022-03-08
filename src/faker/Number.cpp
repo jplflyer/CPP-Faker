@@ -68,8 +68,6 @@ string Faker::Number::leading_zero_number(int digits) {
  *
  * ## Examples
  *   Faker::Number.decimal_part(digits: 2)  *=> "09"
- *
- * @faker.version 1.0.0
  */
 string Faker::Number::decimal_part(int digits) {
     string retVal = Base::randomDigits(digits);
@@ -91,8 +89,6 @@ string Faker::Number::decimal_part(int digits) {
  * ## Examples
  *   Faker::Number.decimal(l_digits: 2)  *=> 11.88
  *   Faker::Number.decimal(l_digits: 3, r_digits: 3)  *=> 181.843
- *
- * @faker.version 1.0.0
  */
 double Faker::Number::decimal(  int l_digits, int r_digits ) {
     double retVal = Base::randomNumber(1, 9);	// Start with non-zero.
