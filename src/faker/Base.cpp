@@ -61,6 +61,8 @@ Base::setup() {
  */
 long
 Base::randomNumber(long low, long high) {
+    setup();
+
     long retVal = 0;
     long range = high - low + 1;	// For 0..5, we have 6 possible values.
 
@@ -191,6 +193,21 @@ std::string Faker::Base::randomDigits(int length) {
     for (int index = 0; index < length; ++index) {
         char c = '0' +  randomNumber(0, 9);
         retVal += c;
+    }
+
+    return retVal;
+}
+
+/**
+ * Basically a random string within the listed character set.
+ */
+std::string Faker::Base::randomPassword(int length) {
+    string retVal = "";
+    const char * chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_.,!";
+    int cLen = strlen(chars);
+
+    for (int index = 0; index < length; ++index) {
+        retVal += chars[randomNumber(0, cLen-1)];
     }
 
     return retVal;

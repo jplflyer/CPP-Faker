@@ -24,7 +24,7 @@
 //					.prefix					-- an array of simple strings
 //					.first_name				-- an array of strings:     "#{female_first_name}", "#{male_first_name}"
 //					.name_with_middle		-- an array of strings with choices similar to first_name
-//					.name					-- an array of strigns with choices similar to first_name
+//					.name					-- an array of strings with choices similar to first_name
 //
 // So this is represented by:
 //		globalData: OBJECT_MAP [
