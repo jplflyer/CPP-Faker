@@ -149,10 +149,11 @@ string Faker::Number::hexadecimal( int digits ) {
 }
 
 /**
- * Produces a float given a mean and standard deviation.
+ * Produces random floating points in a normal (bell curve) distribution.
+ * Provide the mean and standard distribution.
  *
- * @param mean [Integer]
- * @param standard_deviation [Integer, Float]
+ * @param mean
+ * @param standard_deviation
  *
  * ## Examples
  *   Faker::Number.normal(mean: 50, standard_deviation: 3.5)  *=> 47.14669604069156

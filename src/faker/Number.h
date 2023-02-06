@@ -20,7 +20,7 @@ public:
     static double		decimal( int l_digits = 5, int r_digits = 2);
     static long			non_zero_digit();
     static long			digit();
-    static std::string	hexadecimal( int digits = 6);
-    static double		normal(  double = 1.0, double standard_deviation = 1.0);
-    static long			between( long from = 1, long to = 5000);
+    static std::string	hexadecimal( int digits = 6 );
+    static double		normal( double mean = 1.0, double standard_deviation = 1.0 );
+    static long			between( long from = 1, long to = 5000 );
 };
